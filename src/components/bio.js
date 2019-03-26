@@ -20,7 +20,7 @@ function Bio() {
             <Image
               fixed={data.avatar.childImageSharp.fixed}
               alt={author}
-              className="mr-2 mb-0 rounded-full flex-shrink-0"
+              className="mr-2 mb-0 rounded-full flex-no-shrink"
               imgStyle={ {
                 zIndex: -1
               } }

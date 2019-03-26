@@ -13,7 +13,7 @@ body {
 
 main a { @apply text-blue; }
 main a:hover { @apply text-blue-light; }
-main a:visited { @apply text-blue; }
+main a:visited { color: inherit; }
 main a:active { @apply text-blue-light; }
 main a:visited:hover { @apply text-blue-light; }
 

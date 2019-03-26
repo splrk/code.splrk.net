@@ -3,12 +3,12 @@ import Header from './header.js';
 
 class Layout extends React.Component {
   render() {
-    const { title, children } = this.props
+    const { title, children, className } = this.props
     
     return (
       <div className="ml-auto mr-auto max-w-xl pt-24 pl-3 pr-3">
         <Header>{ title }</Header>
-        <main className="font-sans leading-normal md:flex md:flex-row-reverse">
+        <main className={ `font-sans leading-normal ${className}` }>
           {children}
         </main>
         <footer>
