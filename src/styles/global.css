@@ -1,3 +1,6 @@
+@tailwind preflight;
+@tailwind utilities;
+
 body {
     background: url("../../static/dust_scratches.png") repeat;
 }
@@ -6,4 +9,11 @@ body {
     background: radial-gradient(at 75% 75%, #FAFAFA 0%, #FFF0 65%);
     min-height: 100vh;
 }
+
+
+main a { @apply text-blue; }
+main a:hover { @apply text-blue-light; }
+main a:visited { @apply text-blue; }
+main a:active { @apply text-blue-light; }
+main a:visited:hover { @apply text-blue-light; }
 

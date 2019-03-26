@@ -1,66 +1,16 @@
 import React from "react"
-import { Link } from "gatsby"
-
-import { rhythm, scale } from "../utils/typography"
+import Header from './header.js';
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    let header
-
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
-      )
-    }
+    const { title, children } = this.props
+    
     return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(36),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`
-        }}
-      >
-        <header>{header}</header>
-        <main>{children}</main>
+      <div className="ml-auto mr-auto max-w-xl pt-24 pl-3 pr-3">
+        <Header>{ title }</Header>
+        <main className="font-sans leading-normal md:flex md:flex-row-reverse">
+          {children}
+        </main>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
