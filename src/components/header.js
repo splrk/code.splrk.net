@@ -6,7 +6,7 @@ export default class Header extends React.Component {
     const { children } = this.props;
 
     return (
-      <header className="fixed pin-t pin-l pin-r bg-yellow p-4 shadow-md">
+      <header className="fixed pin-t pin-l pin-r bg-yellow p-4 shadow-md z-50">
         <h1 className="font-serif">
           <Link className="no-underline text-black shadow-none" to="/">
             { children }

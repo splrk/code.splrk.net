@@ -2,12 +2,15 @@
 @tailwind utilities;
 
 body {
-    background: url("../../static/dust_scratches.png") repeat;
+    @apply bg-blue-darker;
 }
 
 #___gatsby {
+    background: url("../../static/dust_scratches.png") repeat;
+}
+
+.g-radial-light-br {
     background: radial-gradient(at 75% 75%, #FAFAFA 0%, #FFF0 65%);
-    min-height: 100vh;
 }
 
 
@@ -17,3 +20,18 @@ main a:visited { color: inherit; }
 main a:active { @apply text-blue-light; }
 main a:visited:hover { @apply text-blue-light; }
 
+.markdown p,
+.markdown ul,
+.markdown ol,
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+    @apply mb-4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+}

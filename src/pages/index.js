@@ -29,7 +29,7 @@ class BlogIndex extends React.Component {
                 </Link>
               </h2>
                 { tags.map(tag => (
-                  <small class="inline-block text-white bg-blue py-1 px-2 ml-1 rounded align-text-bottom">
+                  <small key={ tag } className="inline-block text-white bg-blue py-1 px-2 ml-1 rounded align-text-bottom">
                     { tag }
                   </small>
                 ))}

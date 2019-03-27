@@ -20,8 +20,8 @@ class BlogPostTemplate extends React.Component {
         <p className="block mb-4 -mt-1">
           {post.frontmatter.date}
         </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr className="mb-4" />
+        <div className="markdown" dangerouslySetInnerHTML={{ __html: post.html }} />
+        <hr className="mb-16" />
         <Bio />
 
         <ul className="flex flex-wrap justify-between list-reset">
