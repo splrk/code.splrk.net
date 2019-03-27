@@ -16,19 +16,11 @@ function Bio() {
       render={data => {
         const { author, social } = data.site.siteMetadata
         return (
-          <div className="flex mb-3 md:max-w-xs">
-            <Image
-              fixed={data.avatar.childImageSharp.fixed}
-              alt={author}
-              className="mr-2 mb-0 rounded-full flex-no-shrink"
-            />
+          <div className="flex mb-3 md:max-w-xs md:ml-4 border-blue-lighter border-2 border-solid rounded p-4 md:self-start">
             <p>
-              Written by <strong>{author}</strong> who lives and works in San
-              Francisco building useful things.
-              {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow him on Twitter
-              </a>
+              Written by <strong>{author}</strong> who has been developing software
+              professionaly for the last 15 years.  Currently he lives and works in
+              South Africa wirting software for a non-profit organization.
             </p>
           </div>
         )

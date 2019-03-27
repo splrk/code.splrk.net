@@ -8,10 +8,11 @@ class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
+    const siteDescription = data.site.siteMetadata.description
     const posts = data.allMarkdownRemark.edges
 
     return (
-      <Layout location={this.props.location} title={siteTitle} className="md:flex md:flex-row-reverse">
+      <Layout location={this.props.location} title={siteTitle} description={ siteDescription } className="md:flex md:flex-row-reverse">
         <SEO
           title="All posts"
           keywords={[`blog`, `javascript`]}
@@ -58,6 +59,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
