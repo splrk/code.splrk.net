@@ -17,8 +17,8 @@ function Bio() {
         return (
           <div className="flex mb-3 md:max-w-xs md:ml-4 border-blue-lighter border-2 border-solid rounded p-4 md:self-start">
             <p>
-              Written by <strong>{author}</strong> who has been developing software
-              professionaly for the last 15 years.  Currently he lives and works in
+              I am <strong>{author}</strong> and been developing software
+              professionaly for the last 12 years.  Currently I live and work in
               South Africa wirting software for a non-profit organization.
             </p>
           </div>
